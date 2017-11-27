@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script>
+function passWord() {
+var testV = 1;
+var pass1 = prompt('Please Enter Your Password',' ');
+while (testV < 3) {
+if (!pass1) 
+history.go(-1);
+if (pass1.toLowerCase() == "your password") {
+alert('Transporting you to the super secure link');
+window.open('index2.html');
+break;
+} 
+testV+=1;
+var pass1 = 
+prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+}
+if (pass1.toLowerCase()!="password" & testV ==3) 
+history.go(-1);
+return " ";
+} 
+</script>
+<center>
+<form>
+<input type="button" value="Enter Protected Area" onClick="passWord()">
+</form>
+</center>
+</html>
